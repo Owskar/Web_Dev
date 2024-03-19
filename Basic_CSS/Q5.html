@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .menu a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            /* Smooth hover effect transition */
+        }
+
+        .menu a:hover {
+            background-color: #555;
+        }
+
+        @media screen and (max-width: 600px) {
+            .menu {
+                display: none;
+                /* Hide menu by default on small screens */
+            }
+
+            .menu.show {
+                display: block;
+                /* Show menu when activated */
+            }
+
+            .menu a {
+                float: none;
+                display: block;
+                text-align: left;
+                border-bottom: 1px solid #777;
+                /* Add a separator between menu items */
+            }
+        }
+
+        .menu-icon {
+            display: none;
+            /* Hide menu icon by default on larger screens */
+        }
+
+        @media screen and (max-width: 600px) {
+            .menu-icon {
+                display: block;
+                /* Show menu icon on small screens */
+                color: white;
+                background-color: #333;
+                padding: 10px;
+                cursor: pointer;
+                /* Change cursor to pointer for better UX */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <div class="menu" id="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+    </script>
+
+</body>
+
+</html>

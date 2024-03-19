@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Example</title>
+    <style>
+        /* Element Selector */
+        h1 {
+            color: blue;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Class Selector */
+        .highlight {
+            background-color: yellow;
+        }
+
+        /* ID Selector */
+        #special-text {
+            font-weight: bold;
+        }
+
+        /* Descendant Selector */
+        div p {
+            font-style: italic;
+        }
+
+        /* Child Selector */
+        ul>li {
+            color: green;
+        }
+
+        /* Attribute Selector */
+        a[target="_blank"] {
+            color: red;
+        }
+
+        /* Pseudo-class Selector */
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Pseudo-element Selector */
+        p::first-line {
+            font-size: 120%;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to CSS Selectors Example</h1>
+
+
+    <p id="special-text">
+        CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in
+        HTML or XML, defining how elements should be displayed on the screen, in print, or spoken aloud.</p>
+
+    <div>
+        <p id="my-Paragraph">MY Skills </p>
+    </div>
+
+    <ul>
+        <li class="highlight">HTML</li>
+        <li>CSS</li>
+        <li class="highlight">JavaScript</li>
+    </ul>
+
+
+</body>
+
+</html>
